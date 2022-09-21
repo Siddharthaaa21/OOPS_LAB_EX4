@@ -1,45 +1,38 @@
 //Write a program in Java to create a Player class. Inherit the classes Cricket _Player, Football_Player and Hockey_ Player from Player class
-public class Players 
-{
-   String name;
-   String country;
-   int overall_points; 
-   Players(String n,String c,int p)
-   {
-    this.name=n;
-this.country=c;
-this.overall_points=p;
-   }
-
-
-    
-}
-public class Cricket_Player extends Players
-{
-    Cricket_Player()
-    {
-this.name=n;
-this.country=c;
-this.overall_points=p;
-System.out.println(name+""+country+""+overall_points+"");
+class Player {
+    String name;
+    String sport;
+    Player(String name,String sport){
+        this.name=name;
+        this.sport=sport;
     }
-
-}
- class  Hockey_Player extends Player
-{String name;
-    String country;
-    int overall_points; 
-    Hockey_Player (String n,String c,int p)
-    {
-super(n,c,p);
-System.out.println(this.name+""+this.country+""+this.overall_points+"");
-}
-class main{
-    public static void main(String args[])
-    {
-        Cricket_Player ob=new Cricket_Player();
-        String n="Siddhartha";String c="Inda";int p=20;
-        
-     ob.Cricket_Player();
+    void display() {
+        System.out.println("Player Name:" + this.name);
+        System.out.println("Sport Name:" + this.sport+"\n");
     }
-}}
+}
+class Cricket_Player extends Player{
+
+    Cricket_Player(String name, String sport) {
+        super(name, sport);    }
+}
+class Football_Player extends Player{
+    Football_Player(String name, String sport) {
+        super(name, sport);
+    }
+}
+class Hockey_Player extends Player{
+    Hockey_Player(String name, String sport) {
+        super(name, sport);
+    }
+}
+class Program{
+    public static void main(String[] args) {
+        Cricket_Player ob1=new Cricket_Player("MSD","Cricket");
+        Football_Player ob2=new Football_Player("CR7","Football");
+        Hockey_Player ob3=new Hockey_Player("XYZ","Hockey");
+        ob1.display();
+        ob2.display();
+        ob3.display();
+    }
+}

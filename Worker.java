@@ -23,6 +23,7 @@ public class Worker {
 }
     class DailyWorker extends Worker{
         
+        
         public void DailyWorker(String name,int salory)
         {
             super(name,salory);
@@ -59,7 +60,8 @@ public class Worker {
              System.out.println("The rate/salory is; "+rate);
         }
 
-    }class decide {
+    }
+    public class decide {
 
     
     public static void main(String args[])
